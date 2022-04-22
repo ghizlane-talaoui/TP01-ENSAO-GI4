@@ -1,12 +1,17 @@
 package com.ensa.gi4.service.impl;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import com.ensa.gi4.dao.MaterielDAOImpl;
 import com.ensa.gi4.modele.Materiel;
 import com.ensa.gi4.service.api.GestionMaterielService;
 
+
+@Component
 public class GestionMaterielServiceImpl implements GestionMaterielService {
-	
+
 	public MaterielDAOImpl materielDAOImp;
 	
 	public GestionMaterielServiceImpl(MaterielDAOImpl materielDAOImp) {

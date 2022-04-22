@@ -1,11 +1,14 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="
-		http://www.springframework.org/schema/beans 
-		http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
-		
-	
+       xmlns:context="http://www.springframework.org/schema/context"
 
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-3.2.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+ <context:component-scan base-package="com.ensa.gi4" />
+
+	
+<!--  
     <bean id="gestionMaterielService" class="com.ensa.gi4.service.impl.GestionMaterielServiceImpl">
     	<constructor-arg ref="materielDAOImpl"/>
      </bean>
@@ -19,5 +22,5 @@
     </bean>
      <bean id="materielList" class="com.ensa.gi4.dao.MaterielListe"/>
 
-
+-->
 </beans>

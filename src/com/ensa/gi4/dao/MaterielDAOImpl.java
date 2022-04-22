@@ -2,10 +2,15 @@ package com.ensa.gi4.dao;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import com.ensa.gi4.modele.Materiel;
 
+
+@Component
 public class MaterielDAOImpl implements MaterielDAO{
-	
+	@Autowired
 	 MaterielListe mylist;
 	 
 	 private MaterielDAOImpl materielDAOImp = null;

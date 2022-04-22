@@ -7,8 +7,11 @@ import com.ensa.gi4.service.api.GestionMaterielService;
 
 import java.util.Scanner;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+@Component
 public class GestionMaterielController {
-
+	
     private GestionMaterielService gestionMaterielService;
 
     public void listerMateriel() {
@@ -107,7 +110,7 @@ public class GestionMaterielController {
     private void sortirDeLApplication() {
         System.exit(0);
     }
-
+    @Autowired
     public void setGestionMaterielService(GestionMaterielService gestionMaterielService) {
         // injection par accesseur
         this.gestionMaterielService = gestionMaterielService;

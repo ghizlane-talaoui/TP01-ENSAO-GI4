@@ -1,10 +1,17 @@
 package com.ensa.gi4.service.impl;
 
+
+import com.ensa.gi4.dao.MaterielDAOImpl;
 import com.ensa.gi4.modele.Materiel;
 import com.ensa.gi4.service.api.GestionMaterielService;
 
 public class GestionMaterielServiceImpl implements GestionMaterielService {
-    // bd goes here
+	
+	public MaterielDAOImpl materielDAOImp;
+	
+	public GestionMaterielServiceImpl(MaterielDAOImpl materielDAOImp) {
+        this.materielDAOImp = materielDAOImp;
+}
     @Override
     public void init() {
         System.out.println("inititialisation du service");
@@ -12,12 +19,30 @@ public class GestionMaterielServiceImpl implements GestionMaterielService {
 
     @Override
     public void listerMateriel() {
-        System.out.println("Liste de matériel :\n 3 Livres \n 4 chaises");
+    	
+    	materielDAOImp.lister();
+        
     }
 
     @Override
     public void ajouterNouveauMateriel(Materiel materiel) {
-        // à compléter
-        System.out.println("L'ajout du matériel " + materiel.getName() + " effectué avec succès !");
+    	
+        materielDAOImp.ajouter(materiel);
     }
+	@Override
+	public void supprimerMateriel(int id) {
+		materielDAOImp.supprimer(id);
+		
+	}
+	@Override
+	public void modifierMateriel(int id, String name) {
+		materielDAOImp.modifier(id, name);
+		
+	}
+	@Override
+	public void rechercheMateriel(String name) {
+		
+		materielDAOImp.rechercher(name);
+		
+	}
 }

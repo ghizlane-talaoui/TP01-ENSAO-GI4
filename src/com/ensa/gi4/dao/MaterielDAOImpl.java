@@ -11,13 +11,16 @@ import com.ensa.gi4.modele.Materiel;
 @Component
 public class MaterielDAOImpl implements MaterielDAO{
 	@Autowired
-	 MaterielListe mylist;
+	private MaterielListe mylist;
 	 
 	 private MaterielDAOImpl materielDAOImp = null;
 	 
 	    public MaterielDAOImpl(MaterielListe mylist) {
 	     this.mylist = mylist;
 	    }
+	    public MaterielDAOImpl() {
+		    
+		    }
 
 
 	@Override

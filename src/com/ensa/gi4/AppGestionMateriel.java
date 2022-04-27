@@ -19,7 +19,7 @@ public class AppGestionMateriel {
     	// bloc static pour initilialisation
         APPLICATION_CONTEXT = new AnnotationConfigApplicationContext(AppGestionMateriel.class);
     }
-
+@Autowired
     public static void main(String[] args) {
  
         final GestionMaterielController gestionMaterielController = APPLICATION_CONTEXT.getBean(GestionMaterielController.class);

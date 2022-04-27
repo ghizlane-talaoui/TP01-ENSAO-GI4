@@ -11,12 +11,15 @@ import com.ensa.gi4.service.api.GestionMaterielService;
 
 @Component
 public class GestionMaterielServiceImpl implements GestionMaterielService {
-
+	@Autowired
 	public MaterielDAOImpl materielDAOImp;
 	
 	public GestionMaterielServiceImpl(MaterielDAOImpl materielDAOImp) {
         this.materielDAOImp = materielDAOImp;
 }
+	 public GestionMaterielServiceImpl() {
+
+	    }
     @Override
     public void init() {
         System.out.println("inititialisation du service");
